@@ -6,15 +6,26 @@
   height: 40vmin;
 }
 
-.App-header {
+.App-Typography {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-Graphic {
+  display: grid;
+  justify-content: right;
+  max-width: max-content;
+}
+
+.App-DataTable {
+  display: grid;
+  justify-items: center;
 }
 
 .App-link {

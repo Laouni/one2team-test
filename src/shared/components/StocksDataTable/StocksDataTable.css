@@ -1,0 +1,25 @@
+.table {
+  min-width: 5%;
+}
+
+.content-editable {
+  padding: 1rem;
+}
+
+.content-editable:hover {
+  background: #f7f7f7;
+}
+
+.content-editable:focus {
+  background: #fcf8e1;
+  outline: 0;
+}
+
+.paper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.root {
+  width: 60%;
+}

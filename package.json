@@ -1,20 +1,101 @@
 {
   "name": "one2team-test",
   "version": "0.1.0",
+  "author": "Beauclair BILONG <laouningoue@gmail.com>",
+  "license": "MIT",
+  "description": "React Application for One2Team test",
+  "main": "index.js",
   "private": true,
-  "dependencies": {
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+  "engines": {
+    "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "redux",
+    "jest",
+    "axios",
+    "material-ui",
+    "flow",
+    "recharts",
+    "enzymz"
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "run-s lint jest",
+    "lint": "run-p lint:*",
+    "lintfix": "eslint src/shared --fix",
+    "lint:scripts": "eslint src/shared",
+    "jest": "cross-env BABEL_ENV=test jest --env=jsdom --maxWorkers=4 --config ./tools/config/test/jest.cover.json",
+    "jest:only": "cross-env BABEL_ENV=test jest -u --maxWorkers=4 --onlyChanged --config ./tools/config/test/jest.cover.json",
+    "jest:push": "cross-env BABEL_ENV=test jest --maxWorkers=4 --config ./tools/config/test/jest.straight.json",
+    "jest:update": "cross-env BABEL_ENV=test jest -u --config ./tools/config/test/jest.straight.json",
+    "jest:watch": "cross-env BABEL_ENV=test jest -watch --config ./tools/config/test/jest.straight.json",
+    "flow": "flow",
+    "precommit": "lint-staged && yarn flow",
+    "prettier:js": "prettier --write \"src/**/*.js\" \"tools/**/*.js\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "lint-staged": {
+    "src/shared/**/*.js": [
+      "prettier --write",
+      "git add",
+      "eslint"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.5.1",
+    "axios": "^0.19.0",
+    "cross-env": "^6.0.3",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "flow-bin": "^0.110.0",
+    "react": "^16.10.2",
+    "react-contenteditable": "^3.3.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-scripts": "3.2.0",
+    "react-test-renderer": "^16.11.0",
+    "recharts": "^1.8.5",
+    "redux": "^4.0.4",
+    "redux-saga": "^1.1.1",
+    "redux-thunk": "^2.3.0",
+    "redux-devtools": "^3.5.0",
+    "redux-devtools-dock-monitor": "^1.1.3",
+    "redux-devtools-log-monitor": "^1.4.0",
+    "semantic-ui-react": "^0.88.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-destructuring": "^7.5.0",
+    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-polyfill": "^6.26.0",
+    "customize-cra": "^0.8.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "jest": "^24.9.0",
+    "jest-environment-jsdom-global": "^1.2.0",
+    "lint-staged": "^9.4.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "react-app-rewired": "^2.1.4",
+    "stylelint": "^11.1.1"
   },
   "browserslist": {
     "production": [

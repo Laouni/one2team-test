@@ -1,0 +1,340 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StocksDataTable compoent should render correctly with props 1`] = `
+<div
+  className="root"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation1 paper MuiPaper-rounded"
+  >
+    <table
+      aria-label="a dense table"
+      className="MuiTable-root table"
+    >
+      <thead
+        className="MuiTableHead-root"
+      >
+        <tr
+          className="MuiTableRow-root MuiTableRow-head"
+        >
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-head"
+            scope="col"
+          >
+            Number
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-head"
+            scope="col"
+          >
+            CAC40
+          </th>
+          <th
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-head"
+            scope="col"
+          >
+            NASDAQ
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        className="MuiTableBody-root"
+      >
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            1
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 12.45,
+                }
+              }
+              data-column="CAC40"
+              data-row={0}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 5.67,
+                }
+              }
+              data-column="NASDAQ"
+              data-row={0}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            2
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 10.43,
+                }
+              }
+              data-column="CAC40"
+              data-row={1}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 15.57,
+                }
+              }
+              data-column="NASDAQ"
+              data-row={1}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            3
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 22.25,
+                }
+              }
+              data-column="CAC40"
+              data-row={2}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 18.61,
+                }
+              }
+              data-column="NASDAQ"
+              data-row={2}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            4
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 11.48,
+                }
+              }
+              data-column="CAC40"
+              data-row={3}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 9.87,
+                }
+              }
+              data-column="NASDAQ"
+              data-row={3}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+        </tr>
+        <tr
+          className="MuiTableRow-root"
+        >
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            5
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 22.95,
+                }
+              }
+              data-column="CAC40"
+              data-row={4}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+          <td
+            aria-sort={null}
+            className="MuiTableCell-root MuiTableCell-sizeSmall MuiTableCell-body"
+          >
+            <div
+              className="content-editable"
+              contentEditable={true}
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": 35.67,
+                }
+              }
+              data-column="NASDAQ"
+              data-row={4}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onInput={[Function]}
+              onKeyDown={[Function]}
+              onKeyPress={[Function]}
+              onKeyUp={[Function]}
+              onPaste={[Function]}
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
