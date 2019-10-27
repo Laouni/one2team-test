@@ -2,6 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import StocksDataTable from './StocksDataTable';
 
+jest.mock('react-redux', () => ({ connect: () => c => c }));
+
 const defaultProps = {
   data: [
     {
