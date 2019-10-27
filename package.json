@@ -26,7 +26,7 @@
     "lint": "run-p lint:*",
     "lintfix": "eslint src/shared --fix",
     "lint:scripts": "eslint src/shared",
-    "jest": "cross-env BABEL_ENV=test jest --env=jsdom --maxWorkers=4 --config ./tools/config/test/jest.cover.json",
+    "jest": "cross-env BABEL_ENV=test jest --maxWorkers=4 --config ./tools/config/test/jest.cover.json",
     "jest:only": "cross-env BABEL_ENV=test jest -u --maxWorkers=4 --onlyChanged --config ./tools/config/test/jest.cover.json",
     "jest:push": "cross-env BABEL_ENV=test jest --maxWorkers=4 --config ./tools/config/test/jest.straight.json",
     "jest:update": "cross-env BABEL_ENV=test jest -u --config ./tools/config/test/jest.straight.json",

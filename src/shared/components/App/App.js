@@ -22,6 +22,7 @@ class App extends React.Component {
    */
   componentDidMount() {
     this.loadStocks();
+    // TODO: remove this line on comment to display continous data
     // setInterval(this.loadStocks, 1000);
   }
 
@@ -84,16 +85,4 @@ class App extends React.Component {
   }
 }
 
-/**
- * @private
- * @param state
- * @returns {{}}
- */
-// const mapStateToProps = (state: Object) => ({ ...state });
-
-/* const actions = {
-  simpleAction: simpleAction,
-}; */
-
 export default App;
-// export default connect(mapStateToProps, actions)(App);

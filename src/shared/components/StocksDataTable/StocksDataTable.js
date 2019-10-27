@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import ContentEditable from 'react-contenteditable';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -10,12 +9,13 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import * as Actions from '../../redux/actions/StocksActions';
+import { setStocks } from '../../redux/actions/StocksActions';
 
 import './StocksDataTable.css';
 
 type PropTypes = {
   data: Array<Object>,
+  updateStocks: Function,
 };
 
 type StateTypes = {
@@ -81,8 +81,7 @@ class StocksDataTable extends React.Component<PropTypes, StateTypes> {
    * @param event
    */
   handleContentEditableUpdate = event => {
-    const { data } = this.props;
-    console.log(`My new CAC40 and NASDAQ stocks : ${JSON.stringify(data)}`);
+    const { data, updateStocks } = this.props;
 
     const {
       currentTarget: {
@@ -93,16 +92,11 @@ class StocksDataTable extends React.Component<PropTypes, StateTypes> {
 
     // eslint-disable-next-line radix
     const updatedRow = data.filter((item, i) => parseInt(i) === parseInt(row))[0];
-    console.log(`row updating ${JSON.stringify(updatedRow)}`);
     updatedRow[column] = value;
-    console.log(`row updating column ${JSON.stringify(updatedRow)}`);
-
-    this.setState({
-      stocks: data.map((item, i) => (item[column] === row ? updatedRow : item)),
-    });
     const stocks = data.map((item, i) => (item[column] === row ? updatedRow : item));
-    Actions.setStocks(stocks);
-    console.log(`My stocks list changed ${JSON.stringify(stocks)}`);
+
+    this.setState({ stocks });
+    updateStocks(stocks);
   };
 
   /**
@@ -133,6 +127,7 @@ class StocksDataTable extends React.Component<PropTypes, StateTypes> {
                       data-column="CAC40"
                       data-row={i}
                       className="content-editable"
+                      onKeyPress={this.validateNumber}
                       onPaste={this.pasteAsPlainText}
                       onFocus={this.highlightAll}
                       onChange={this.handleContentEditableUpdate}
@@ -144,6 +139,7 @@ class StocksDataTable extends React.Component<PropTypes, StateTypes> {
                       data-column="NASDAQ"
                       data-row={i}
                       className="content-editable"
+                      onKeyPress={this.validateNumber}
                       onPaste={this.pasteAsPlainText}
                       onFocus={this.highlightAll}
                       onChange={this.handleContentEditableUpdate}
@@ -173,9 +169,9 @@ const mapStateToProps = (state: Object) => ({
  * @param {Object} dispatch
  * @returns {{actions: *}}
  */
-const mapDispatchToProps = (dispatch: any) => ({
-  actions: bindActionCreators(Actions, dispatch),
-});
+const mapDispatchToProps = {
+  updateStocks: setStocks,
+};
 
 export default connect(
   mapStateToProps,
