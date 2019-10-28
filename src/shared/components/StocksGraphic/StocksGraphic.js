@@ -16,11 +16,7 @@ const StocksGraphic = ({ data }: PropTypes) => {
     <LineChart width={1000} height={500} data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="index" padding={{ left: 30, right: 30 }} />
-      <YAxis
-        label={{ value: 'Stocks values', angle: -90, position: 'insideLeft' }}
-        type="number"
-        domain={[0, 'dataMax']}
-      />
+      <YAxis type="number" domain={[0, 'auto']} />
       <Tooltip />
       <Legend />
       <Line type="monotone" dataKey="CAC40" stroke="#8884d8" activeDot={{ r: 8 }} />

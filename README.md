@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# One2Team - Test for Beauclair Bilong
 
-## Available Scripts
+## TL;DR
 
-In the project directory, you can run:
+**Description :**
 
-### `yarn start`
+Le but est de consommer un web service qui publie le cours du CAC40 et du NASDAQ pour :
+- dans un premier temps, afficher le tableau et la courbe des 20 dernières valeurs retournées par le service.
+- dans un second temps, rendre les cellules du tableau éditables. Quand une cellule du tableau est modifiée, la courbe se met à jour.
+- dans un troisième temps, rafraîchir les données toutes les secondes et mettre à jour tableau et courbe tout en conservant les éventuelles modification utilisateur.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Lors du lancement de l'application les données sont affichées continuellement dans le tableau et sur la courbe.
+Pour n'afficher que les `n` dernières valeurs :
+- Ouvrir le composant [App.js](src/shared/components/App/App.js)
+- Commenter la `ligne 26` et ré-ouvrir l'application sur votre navigateur
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Technologies
 
-### `yarn test`
+- 🔥  `react` -  server side and client side view components.
+- 🤖  `redux` -  application state and actions provider.
+- 🚀  `babel` - transpiles ES6+ where needed.
+- 🔧  `eslint` (airbnb), `stylelint` and `flow` - code quality tools.
+- 👟  `jest` with snapshots and `istanbul` coverage - testing.
+- 😺  `yarn` - dependencies manager.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `yarn build`
+- Clone the repository,
+- Install NodeJS LTS (with nvm),
+- Install `yarn` (eg . `brew install yarn`),
+- Execute `yarn install`.
+- Clone the repository of node.js server [Tutorial Node Stock Server](https://github.com/o2t/tutorial-node-stock-server)
+- Execute `yarn install`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Development
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Open local terminal to `tutorial-node-stock-server-master` repository and launch it with `yarn start`.
+- Open local terminal to `one2team-test` repository and launch it with  `yarn start`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project tasks (✨ Yarn)
 
-### `yarn eject`
+- `yarn build` - Build the sources.
+- `yarn start` - Starts the built server.
+- `yarn test` - Executes all the test suite (flow checking, unit tests and linters).
+- `yarn lint` - Check the code quality with ESLint.
+- `yarn flow` - Static type checking.
+- `yarn jest` - Launch the unit tests and generates a coverage report.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+/
+|- public
+|
+|- src  // All the source code
+|  |- shared // The shared code
+|       |- api // API retrieve data
+|       |- components // Most of the project components
+|          |- App // App components
+|          |- StocksDataTable // StocksDataTable component
+|          |- StocksGraphic // StocksGraphic component
+|       |- constants // constant files
+|       |- redux // redux
+|          |- actions // redux actions
+|          |- reducers // redux reducers
+|          |- store // redux store
+|       |- types
+|- tools
+|  |- config
+|     |- test // configuration for jest
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project Dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The dependencies within `package.json` are structured so that the libraries required to transpile/bundle the source are contained within the `devDependencies` section, whilst the libraries required during the server runtime are contained within the `dependencies` section.
