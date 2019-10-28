@@ -20,10 +20,10 @@ class App extends React.Component {
   /**
    * componentDidMount
    */
-  componentDidMount() {
-    this.loadStocks();
-    // TODO: remove this line on comment to display continous data
-    // setInterval(this.loadStocks, 1000);
+  async componentDidMount(): void {
+    await this.loadStocks();
+    // TODO: comment this line to stop display continous data
+    setInterval(this.loadStocks, 1000);
   }
 
   /**
